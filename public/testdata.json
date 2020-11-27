@@ -1,0 +1,218 @@
+{
+    "onlineTime": "[]",
+    "dashboard": [
+        {
+            "targetAddress": "43DHoYgGL3h63M8vt4kC7yGgdUCg2r6yWAhT1E6qZXYtEfNn",
+            "targetFire": "43294450161834906",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "44CmwGtpxcNeCPMcpLvv68CrWqEUBkh3Po5J6d4PvSC6TWyE",
+                    "stashState": {
+                        "controller": "43DHoYgGL3h63M8vt4kC7yGgdUCg2r6yWAhT1E6qZXYtEfNn",
+                        "overallScore": 280
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "45cN5i2USZCoLdKiNFcbuXHMzYCBGoFGqRvVyvt5vGyM2X8h",
+            "targetFire": "9762833441530729",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "41g1tDYvfiJmWMMdxE24zyRqSGcvQmQ9bxE8M5L7voRPwoPp",
+                    "stashState": {
+                        "controller": "45cN5i2USZCoLdKiNFcbuXHMzYCBGoFGqRvVyvt5vGyM2X8h",
+                        "overallScore": 960
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "43ZxNjYgjPJTyTifB9aSWadQgFmGpsk914Lbu9ya3FxjXeG3",
+            "targetFire": "9244401769270715",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "41D2QkP96x8isTBfaG5irBADqswqfaZMVVHQJwwz57huefDV",
+                    "stashState": {
+                        "controller": "43ZxNjYgjPJTyTifB9aSWadQgFmGpsk914Lbu9ya3FxjXeG3",
+                        "overallScore": 320
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "45TwJnTRKuD9QQncEYafWEaaG3JSpQivJ6U9c5f3mFkoaigR",
+            "targetFire": "2885693770626620",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "45TwJnTRKuD9QQncEYafWEaaG3JSpQivJ6U9c5f3mFkoaigR",
+                    "stashState": {
+                        "controller": "45smJ47hD3vywPQwXx9GZ8ZjNty6wfszSuzpAWjRaFkDcJjg",
+                        "overallScore": 140
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "45KqwYXphD2rX9hnvBUTg7T3UX55DDJnCZMQGxZjiJwFC9uB",
+            "targetFire": "487949044585986",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "454HeuCJQx5BEYyc1CcXLk3NFjq4v9fCP4fFRTG72i5mbjn6",
+                    "stashState": {
+                        "controller": "457HdDZBVcNw95N3wPQ8V3hL834NEtAQLGKT9SUMcZsEcceW",
+                        "overallScore": 480
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "46BUBoC4vDMagc2R4R7qRfCQt6urDv14NiwboEFoFHfTfwwy",
+            "targetFire": "192000000000000",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "46BUBoC4vDMagc2R4R7qRfCQt6urDv14NiwboEFoFHfTfwwy",
+                    "stashState": {
+                        "controller": "45unFz8JejHs1dLHnatdR7EJQGQdwaZ7y3sWpo82zgStmcCr",
+                        "overallScore": 640
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "41mG4WPxJCr3uMHqvZ3r3ppAede15ffYdYd8VAhFwy2Uyma5",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "41mG4WPxJCr3uMHqvZ3r3ppAede15ffYdYd8VAhFwy2Uyma5",
+                    "stashState": {
+                        "controller": "41KPizy9pf9gkDEwUH3kq48QZ6qwrVNdJ2wmTT2CKy2UmjrY",
+                        "overallScore": 100
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "42kz95dL6WZpVVvbQcvNMytbyfGK2Jcv2ytDmYQeUPfii7kc",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "43z3tiatk23eQC8Ku8GQJVkTnvqRnYVgHVmoQji2apV4a9ru",
+                    "stashState": {
+                        "controller": "45kQr61oBiPtZygJujj4Woe7URSpqwAjQNQxGT4mh5k5LKmf",
+                        "overallScore": 320
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "41rASEzzFsP4EPhPuUmttHgeoz5GFuwsw9NpWvEbpCxe1PoC",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "41rASEzzFsP4EPhPuUmttHgeoz5GFuwsw9NpWvEbpCxe1PoC",
+                    "stashState": {
+                        "controller": "43Pwtj6HhU1nZsbQfEZG4qDGqxm44b7iYJXXNHEb3LEAmdz3",
+                        "overallScore": 100
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "41JsUn8WGwae3fEPx7cMBLUfSLy6KTgoeqS4Vhwp5MiSGG19",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "41JsUn8WGwae3fEPx7cMBLUfSLy6KTgoeqS4Vhwp5MiSGG19",
+                    "stashState": {
+                        "controller": "41JsUn8WGwae3fEPx7cMBLUfSLy6KTgoeqS4Vhwp5MiSGG19",
+                        "overallScore": 280
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "457K9cKqWs9C1QeV6Z8yKqrJoEL131bNPvGKoezEH5Gxuk6R",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "459BZcn6oTQJfK4pBPFynmrnJRv2rt4V5XGKemeGbjeG5ppS",
+                    "stashState": {
+                        "controller": "457K9cKqWs9C1QeV6Z8yKqrJoEL131bNPvGKoezEH5Gxuk6R",
+                        "overallScore": 280
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "42w95yBGw4VHgAS763F7gUe2jMWVnfEXk81zJGxGeyWJAQeP",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "42w95yBGw4VHgAS763F7gUe2jMWVnfEXk81zJGxGeyWJAQeP",
+                    "stashState": {
+                        "controller": "44vCo4JmRJ4ufW6d9iKSud7Dq2zTx4SV6DniALE2sXVYv7Yz",
+                        "overallScore": 640
+                        
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "42XJAecGztvobs93QWifMKqE6fMKtzgzGgYdeGc475uQwGMT",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "42XJAecGztvobs93QWifMKqE6fMKtzgzGgYdeGc475uQwGMT",
+                    "stashState": {
+                        "controller": "42ovpSqL2SSYCpmKQ7gmCfkK6Vg5TcJ1zUq7bYh34RSCuQtV",
+                        "overallScore": 100
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "42DgMJez5xzhWKp1NaTE3H79VDqBbA5Gbg9eQqsdvKiJgxo4",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "42DgMJez5xzhWKp1NaTE3H79VDqBbA5Gbg9eQqsdvKiJgxo4",
+                    "stashState": {
+                        "controller": "42amZTGfALsySdXWEjvdftmU6cF7wExtySoQtogjizLbBHYQ",
+                        "overallScore": 100
+                    }
+                }
+            ]
+        },
+        {
+            "targetAddress": "44Ub1u4VuvSfHJdPTFQK8YRVDC5a3Rny3BAwmNG3ngzcvHxh",
+            "targetFire": "0",
+            "targetFireRatio": "0.00%",
+            "targetState": [
+                {
+                    "stashAddress": "43vp6Q7PzLJdbK11t7CjC6EjiKRUkyvrRRS5mAx75t6UbLze",
+                    "stashState": {
+                        "controller": "43vp6Q7PzLJdbK11t7CjC6EjiKRUkyvrRRS5mAx75t6UbLze",
+                        "overallScore": 280
+                    }
+                }
+            ]
+        }
+    ],
+    "maxTotalPower": 0,
+    "lotteryPool": "[]"
+}
