@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Axios from 'axios';
 import BN from 'bn.js';
@@ -29,17 +29,41 @@ const defaultData = {
     },]
 };
 
-function ProgressBar () {
+const kUnlockHashPowerThreshold = [0, 500000, 1000000, 3000000];
+const kUnlockHashPowerMax = kUnlockHashPowerThreshold[kUnlockHashPowerThreshold.length - 1];
+
+function ProgressBar({currentPower}) {
+  const progress = currentPower / kUnlockHashPowerMax;
+
+  function perc(x) {
+    x = Math.pow(x, 0.8);
+    return `${(100 * x) | 0}%`;
+  }
+
+  useEffect(() => {
+    console.log({currentPower, kUnlockHashPowerMax, progress});
+  }, [])
+
   return (
-    <div style={{backgroundColor: '#232323', width: '100%', height: '25px'}}>
-      <div style={{backgroundColor: '#D1FF52', width: '5%', height: '100%'}}>
+    <div className='progress-bar'>
+      <div className='indicator' style={{width: perc(progress)}}>
+      </div>
+      <div className='base-label'>Base: 500k PHA</div>
+      <div className='marker' style={{left: perc(kUnlockHashPowerThreshold[1]/kUnlockHashPowerMax)}}>
+        <div className='label'>600k PHA</div>
+      </div>
+      <div className='marker' style={{left: perc(kUnlockHashPowerThreshold[2]/kUnlockHashPowerMax)}}>
+        <div className='label'>700k PHA</div>
+      </div>
+      <div className='marker' style={{left: perc(kUnlockHashPowerThreshold[3]/kUnlockHashPowerMax)}}>
+        <div className='label'>800k PHA</div>
       </div>
     </div>
   );
 }
 
 function App() {
-  React.useEffect(() => {
+  useEffect(() => {
     const i = setInterval(() => {
       updateData();
     }, 6000);
@@ -73,7 +97,9 @@ function App() {
 
           <h5>Total Prize Pool</h5>
 
-          <ProgressBar></ProgressBar>
+          <ProgressBar
+            currentPower={data.maxTotalPower}
+          />
 
           <p>
             Want to increase the total prize pool? <a className="color-primary" href="https://wiki.phala.network/en-us/docs/poc3/">Join mining</a>
