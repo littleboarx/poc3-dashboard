@@ -40,12 +40,18 @@ function ProgressBar () {
 
 function App() {
   React.useEffect(() => {
-    updateData();
+    const i = setInterval(() => {
+      updateData();
+    }, 6000);
+    return () => clearInterval(i);
   }, [])
 
   const [data, setData] = useState(defaultData);
   async function updateData() {
-    const resp = await Axios.get('./testdata.json');
+    const path = (
+      process.env.REACT_APP_ENV === 'development'
+      ? './testdata.json' : './result.json');
+    const resp = await Axios.get(path);
     setData(resp.data);
   }
 
@@ -70,7 +76,7 @@ function App() {
           <ProgressBar></ProgressBar>
 
           <p>
-            Want to increase the total prize pool? <a className="color-primary" href="https://www.google.com">Join mining</a>
+            Want to increase the total prize pool? <a className="color-primary" href="https://wiki.phala.network/en-us/docs/poc3/">Join mining</a>
           </p>
         </Container>
       </section>
@@ -81,16 +87,16 @@ function App() {
             <thead>
               <tr className="color-primary">
                 <th>Rank</th>
-                <th>💰Miner💰</th>
-                <th>👷Miners👷</th>
-                <th>🔥Fire🔥</th>
-                {/* <th>⛏CPU Power⛏</th> */}
-                <th>🔥%🔥</th>
+                <th>Miner</th>
+                <th>Miners</th>
+                <th>Fire</th>
+                {/* <th>CPU Power</th> */}
+                <th>%</th>
               </tr>
             </thead>
             <tbody>
               {data.dashboard.map((whale, idx) => (
-                <tr>
+                <tr key={idx}>
                   <td>{idx + 1}</td>
                   <td>{whale.targetAddress}</td>
                   <td>{whale.targetState.length}</td>
@@ -101,6 +107,12 @@ function App() {
               ))}
             </tbody>
           </table>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <p>2020 Phala Network - Last updated: {data.date} (UTC+8)</p>
         </Container>
       </section>
 
