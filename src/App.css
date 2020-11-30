@@ -35,8 +35,9 @@ section {
   background-color: #303030;
 }
 
-table {
+table.table-dark {
   text-align: center;
+  background-color: transparent;
 }
 table th:nth-child(4), table th:nth-child(5) {
   text-align: right;
@@ -44,9 +45,9 @@ table th:nth-child(4), table th:nth-child(5) {
 table td:nth-child(4), table td:nth-child(5) {
   text-align: right;
 }
-table thead th {
+table thead.higher th {
   padding: 20px 0;
-  background-color: #000;
+  background-color: transparent;
 }
 table thead th:nth-child(1) {
   padding-left: 20px;
@@ -69,11 +70,15 @@ table tbody tr td:nth-child(2) {
 table tbody tr td:nth-last-child(1) {
   padding-right: 20px;
 }
-table tr:nth-child(even) {
+table tbody tr:nth-child(even) {
+  background-color: #282828;
+}
+table tbody tr:nth-child(odd) {
   background-color: #000;
 }
-table tr:nth-child(odd) {
-  background-color: #282828;
+table.table-dark.table-hover tbody tr:hover {
+  background-color: #D1FF52;
+  color: #000;
 }
 
 .progress-bar {

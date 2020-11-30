@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import BN from 'bn.js';
 
-import {Container} from 'react-bootstrap';
+import {Container, Table} from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -40,10 +40,6 @@ function ProgressBar({currentPower}) {
     return `${(100 * x) | 0}%`;
   }
 
-  useEffect(() => {
-    console.log({currentPower, kUnlockHashPowerMax, progress});
-  }, [])
-
   return (
     <div className='progress-bar'>
       <div className='indicator' style={{width: perc(progress)}}>
@@ -64,6 +60,7 @@ function ProgressBar({currentPower}) {
 
 function App() {
   useEffect(() => {
+    updateData();
     const i = setInterval(() => {
       updateData();
     }, 6000);
@@ -109,8 +106,8 @@ function App() {
 
       <section className="page-data color-white">
         <Container>
-          <table>
-            <thead>
+          <Table responsive borderless variant="dark" size="sm" hover>
+            <thead className="higher">
               <tr className="color-primary">
                 <th>Rank</th>
                 <th>Miner</th>
@@ -132,13 +129,13 @@ function App() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
         </Container>
       </section>
 
       <section>
         <Container>
-          <p>2020 Phala Network - Last updated: {data.date} (UTC+8)</p>
+          <p className="theme-dark">2020 Phala Network - Mining round: {data.round} - Last updated: {(Date.now() - data.timestamp)/1000}s ago</p>
         </Container>
       </section>
 
