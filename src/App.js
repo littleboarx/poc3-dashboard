@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import BN from 'bn.js';
 
-import {Container, Table} from 'react-bootstrap';
+import {Container, Modal, Table} from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+import Lottery from './Lottery';
 
 const bn1e8 = new BN(10).pow(new BN(8));
 
@@ -29,7 +31,7 @@ const defaultData = {
     },]
 };
 
-const kUnlockHashPowerThreshold = [0, 500000, 1000000, 3000000];
+const kUnlockHashPowerThreshold = [0, 140000, 280000, 560000];
 const kUnlockHashPowerMax = kUnlockHashPowerThreshold[kUnlockHashPowerThreshold.length - 1];
 
 function ProgressBar({currentPower}) {
@@ -68,12 +70,16 @@ function App() {
   }, [])
 
   const [data, setData] = useState(defaultData);
+  const [lottery, setLottery] = useState([]);
   async function updateData() {
     const path = (
       process.env.REACT_APP_ENV === 'development'
       ? './testdata.json' : './result.json');
     const resp = await Axios.get(path);
     setData(resp.data);
+    if (resp.data.lotteryPool) {
+      setLottery([JSON.parse(resp.data.lotteryPool)]);
+    }
   }
 
   function formatFire(rawFire) {
@@ -103,6 +109,11 @@ function App() {
           </p>
         </Container>
       </section>
+
+      <Lottery
+        currentPower={data.maxTotalPower}
+        pool={lottery}
+      />
 
       <section className="page-data color-white">
         <Container>
