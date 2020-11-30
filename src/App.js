@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import Axios from 'axios';
 import BN from 'bn.js';
@@ -82,6 +82,8 @@ function App() {
     }
   }
 
+  const dt = useMemo(() => (Date.now() - data.timestamp) / 1000, [data]);
+
   function formatFire(rawFire) {
     return (new BN(rawFire).div(bn1e8).toNumber() / 10000.0).toFixed(4);
   }
@@ -94,6 +96,7 @@ function App() {
     <div className="App">
 
       <section className="page-head color-white">
+        <div className="bg" />
         <Container>
           <h5 className="color-primary">Phala Testnet Vendetta</h5>
           <h1 className="color-primary">1605 Miner Race</h1>
@@ -146,7 +149,7 @@ function App() {
 
       <section>
         <Container>
-          <p className="theme-dark">2020 Phala Network - Mining round: {data.round} - Last updated: {(Date.now() - data.timestamp)/1000}s ago</p>
+          <p className="theme-dark">2020 Phala Network - Mining round: {data.round} - Last updated: {dt}s ago</p>
         </Container>
       </section>
 
