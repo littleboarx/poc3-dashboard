@@ -124,7 +124,7 @@ function App() {
             <thead className="higher">
               <tr className="color-primary">
                 <th>Rank</th>
-                <th>Miner</th>
+                <th>Payout Address</th>
                 <th>Miners</th>
                 <th>Fire</th>
                 {/* <th>CPU Power</th> */}
