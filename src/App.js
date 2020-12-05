@@ -77,8 +77,8 @@ function App() {
       ? './testdata.json' : './result.json');
     const resp = await Axios.get(path);
     setData(resp.data);
-    if (resp.data.lotteryPool) {
-      setLottery([JSON.parse(resp.data.lotteryPool)]);
+    if (resp.data.lotteryPool1) {
+      setLottery([JSON.parse(resp.data.lotteryPool1)]);
     }
   }
 

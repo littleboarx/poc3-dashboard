@@ -100,7 +100,7 @@ function Lottery ({currentPower = 0, pool = []}) {
                     {expanded && 
                         <Body>
                             <p>
-                                Firedrop is a way to randomly distribute some amount of Fire to 5% of the miner accounts based on their ranking. It ONLY happens once the prize pool breaks into the next stage.
+                                Firedrop is a way to randomly distribute some amount of Fire to 5% of the miner stash accounts if they are online for at least 6 mining rounds. It ONLY happens once the prize pool breaks into the next stage. The table below shows the stash account and the prize. The winners will get their prize in the payout target account in 24 hours.
                             </p>
                             {level > 0 && <Pool pool={pool} />}
                         </Body>
