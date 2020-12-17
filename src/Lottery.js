@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   position: relative;
   height: 0;
   width: 100%;
+  z-index: 100;
 `;
 
 const Inner = styled.div`
