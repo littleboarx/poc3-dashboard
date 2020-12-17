@@ -11,6 +11,7 @@ import Lottery from './Lottery';
 import Head from './Head';
 import { defaultData } from './utils';
 import Data from './Data';
+import styled from 'styled-components';
 
 const AppDataContext = createContext();
 const useAppData = () => useContext(AppDataContext);
@@ -61,11 +62,16 @@ const App = () => {
   );
 }
 
+const FootLine = styled.p`
+  text-align: center;
+  margin: 24px auto 42px;
+`
+
 const Foot = () => {
   const { data, dt } = useAppData()
   return <section>
     <Container>
-      <p className="theme-dark">2020 Phala Network - Mining round: {data.round} - Last updated: {dt}s ago</p>
+      <FootLine className="theme-dark">2020 Phala Network - Mining round: {data.round} - Last updated: {dt}s ago</FootLine>
     </Container>
   </section>
 }
