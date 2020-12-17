@@ -110,6 +110,9 @@ table.table-dark.table-hover tbody tr:hover {
   background-color: #D1FF52;
   background-image: linear-gradient(90deg, #D1FF52 0%, #52FFD3 100%);
   height: 100%;
+  display: flex;
+  align-items: flex-start;
+  place-content: flex-end;
 }
 .progress-bar .marker {
   width: 3px;
@@ -146,3 +149,21 @@ table.table-dark.table-hover tbody tr:hover {
 .color-white {
   color: #fff;
 }
+
+.input-group {
+  border: 3px solid #828282;
+}
+
+.input-group-text {
+  background: black;
+  border: 0;
+  color: #878787;
+}
+
+.form-control {
+  border-radius: 0 !important;
+  border: 0px solid #828282;
+  background: black !important;
+  color: white !important;
+}
+

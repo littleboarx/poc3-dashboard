@@ -3,17 +3,65 @@ import { Container } from "react-bootstrap";
 import { perc } from "./utils";
 import { useAppData } from "./App";
 import styled from "styled-components";
+import { useMemo } from "react";
 
 const kUnlockHashPowerThreshold = [0, 140000, 280000, 560000];
 const kUnlockHashPowerMax =
   kUnlockHashPowerThreshold[kUnlockHashPowerThreshold.length - 1];
+
+const PopoverWrapper = styled.div`
+  position: relative;
+  background: #d1ff52;
+  border-radius: 5px;
+  color: black;
+  width: 212px;
+  height: 61px;
+  left: 106px;
+  top: -81px;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+
+  color: #000000;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #d1ff52 transparent transparent transparent;
+  }
+`;
+
+const Popover = () => {
+  const { data } = useAppData();
+  const onlineTimeMap = useMemo(() => {
+    return JSON.parse(data.onlineTimeMap || '[]')
+  }, [data]);
+
+  return (
+    <PopoverWrapper>
+      Power: {`${data.currentTotalPower}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+      <br />
+      Miners: {onlineTimeMap.length}
+    </PopoverWrapper>
+  );
+};
 
 function ProgressBar({ currentPower }) {
   const progress = currentPower / kUnlockHashPowerMax;
   return (
     <>
       <div className="progress-bar">
-        <div className="indicator" style={{ width: perc(progress) }}></div>
+        <div className="indicator" style={{ width: perc(progress) }}>
+          <Popover />
+        </div>
         <div className="base-label">Base: 500k PHA</div>
         <div
           className="marker"
@@ -63,7 +111,7 @@ const DescLine = styled.p`
   line-height: 16px;
 
   color: #ffffff;
-  margin: 21px auto 42px;
+  margin: 21px auto 56px;
 `;
 
 const Head = () => {
