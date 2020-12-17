@@ -1,24 +1,25 @@
-import BN from 'bn.js';
+import BN from "bn.js";
 
 export const bn1e8 = new BN(10).pow(new BN(8));
 
 export const defaultData = {
-  "onlineTime": "[]",
-  "dashboard": [
+  onlineTime: "[]",
+  dashboard: [
     {
-        "targetAddress": "43DHoYgGL3h63M8vt4kC7yGgdUCg2r6yWAhT1E6qZXYtEfNn",
-        "targetFire": "43294450161834906",
-        "targetFireRatio": "0.00%",
-        "targetState": [
-            {
-                "stashAddress": "44CmwGtpxcNeCPMcpLvv68CrWqEUBkh3Po5J6d4PvSC6TWyE",
-                "stashState": {
-                    "controller": "43DHoYgGL3h63M8vt4kC7yGgdUCg2r6yWAhT1E6qZXYtEfNn",
-                    "overallScore": 280
-                }
-            }
-        ]
-    },]
+      targetAddress: "43DHoYgGL3h63M8vt4kC7yGgdUCg2r6yWAhT1E6qZXYtEfNn",
+      targetFire: "43294450161834906",
+      targetFireRatio: "0.00%",
+      targetState: [
+        {
+          stashAddress: "44CmwGtpxcNeCPMcpLvv68CrWqEUBkh3Po5J6d4PvSC6TWyE",
+          stashState: {
+            controller: "43DHoYgGL3h63M8vt4kC7yGgdUCg2r6yWAhT1E6qZXYtEfNn",
+            overallScore: 280,
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export function formatFire(rawFire) {
@@ -29,9 +30,11 @@ export function totalHashPower(stashes) {
   return stashes.reduce((acc, x) => acc + x.stashState.overallScore, 0);
 }
 
-export function perc (x) {
-    let value = Math.pow(x, 0.8);
-    value = (100 * x) | 0;
-    value = value > 100 ? 100 : value;
-    return `${value}%`;
+export function perc(x) {
+  let value = Math.pow(x, 0.8);
+  value = (100 * value) | 0;
+  value = value > 100 ? 100 : value;
+  return `${value}%`;
 }
+
+export function noop() {}

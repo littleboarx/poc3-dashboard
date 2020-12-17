@@ -10,37 +10,50 @@ const kUnlockHashPowerMax =
 
 function ProgressBar({ currentPower }) {
   const progress = currentPower / kUnlockHashPowerMax;
-
-  return <>
-    <div className="progress-bar">
-      <div className="indicator" style={{ width: perc(progress) }}></div>
-      <div className="base-label">Base: 500k PHA</div>
-      <div
-        className="marker"
-        style={{
-          left: perc(kUnlockHashPowerThreshold[1] / kUnlockHashPowerMax),
-        }}
-      >
-        <div className="label">140k POWER<br/>600k PHA</div>
+  return (
+    <>
+      <div className="progress-bar">
+        <div className="indicator" style={{ width: perc(progress) }}></div>
+        <div className="base-label">Base: 500k PHA</div>
+        <div
+          className="marker"
+          style={{
+            left: perc(kUnlockHashPowerThreshold[1] / kUnlockHashPowerMax),
+          }}
+        >
+          <div className="label">
+            140k POWER
+            <br />
+            600k PHA
+          </div>
+        </div>
+        <div
+          className="marker"
+          style={{
+            left: perc(kUnlockHashPowerThreshold[2] / kUnlockHashPowerMax),
+          }}
+        >
+          <div className="label">
+            280k POWER
+            <br />
+            700k PHA
+          </div>
+        </div>
+        <div
+          className="marker"
+          style={{
+            left: perc(kUnlockHashPowerThreshold[3] / kUnlockHashPowerMax),
+          }}
+        >
+          <div className="label">
+            560k POWER
+            <br />
+            800k PHA
+          </div>
+        </div>
       </div>
-      <div
-        className="marker"
-        style={{
-          left: perc(kUnlockHashPowerThreshold[2] / kUnlockHashPowerMax),
-        }}
-      >
-        <div className="label">280k POWER<br/>700k PHA</div>
-      </div>
-      <div
-        className="marker"
-        style={{
-          left: perc(kUnlockHashPowerThreshold[3] / kUnlockHashPowerMax),
-        }}
-      >
-        <div className="label">560k POWER<br/>800k PHA</div>
-      </div>
-    </div>
-  </>;
+    </>
+  );
 }
 
 const DescLine = styled.p`
