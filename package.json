@@ -1,5 +1,6 @@
 {
   "name": "poc3-dashboard",
+  "homepage": "https://poc3.phala.network/dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
