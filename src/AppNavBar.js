@@ -6,7 +6,7 @@ const NavLink = styled(Nav.Link)`
     margin: 0 0.36rem;
 `
 
-
+// eslint-disable-next-line 
 export default () => {
     return <Navbar collapseOnSelect expand="md" bg="transparent" variant="dark">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
